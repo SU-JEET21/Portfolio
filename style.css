@@ -1,0 +1,705 @@
+/* =====================================================
+   GLOBAL RESET
+   Removes default browser spacing
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   ROOT VARIABLES
+   Change colors here to update entire website
+===================================================== */
+
+:root {
+
+    --primary: #00c6ff;
+    --secondary: #0072ff;
+
+    --bg: #07111f;
+
+    --card-bg: rgba(255, 255, 255, 0.05);
+
+    --white: #ffffff;
+
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--bg);
+
+    color: var(--white);
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+/* =====================================================
+   ANIMATED MOLECULE BACKGROUND
+===================================================== */
+
+.background {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    overflow: hidden;
+}
+
+/*
+    Each span is a molecule.
+
+    To add more molecules:
+    Add more <span></span> inside HTML.
+*/
+
+.background span {
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background: var(--primary);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px var(--primary),
+        0 0 20px var(--primary);
+
+    animation: molecule 20s linear infinite;
+}
+
+/* =====================================================
+   MOLECULE FLOAT ANIMATION
+
+   Change:
+   translateX(250px)
+
+   to
+
+   translateX(400px)
+
+   for wider movement.
+===================================================== */
+
+@keyframes molecule {
+
+    from {
+
+        transform:
+            translateY(100vh) translateX(0);
+
+    }
+
+    to {
+
+        transform:
+            translateY(-120vh) translateX(250px);
+
+    }
+}
+
+/* Molecule Positions */
+
+.background span:nth-child(1) {
+    left: 10%;
+    animation-duration: 15s;
+}
+
+.background span:nth-child(2) {
+    left: 20%;
+    animation-duration: 18s;
+}
+
+.background span:nth-child(3) {
+    left: 35%;
+    animation-duration: 13s;
+}
+
+.background span:nth-child(4) {
+    left: 50%;
+    animation-duration: 22s;
+}
+
+.background span:nth-child(5) {
+    left: 65%;
+    animation-duration: 17s;
+}
+
+.background span:nth-child(6) {
+    left: 75%;
+    animation-duration: 20s;
+}
+
+.background span:nth-child(7) {
+    left: 85%;
+    animation-duration: 14s;
+}
+
+.background span:nth-child(8) {
+    left: 95%;
+    animation-duration: 25s;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 8%;
+
+    z-index: 999;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    /* Glass blur effect */
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+/*
+    Increase blur:
+
+    blur(25px)
+
+    Decrease blur:
+
+    blur(5px)
+*/
+
+.logo {
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    color: var(--primary);
+}
+
+nav ul {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+}
+
+nav ul li a {
+
+    color: white;
+
+    text-decoration: none;
+
+    position: relative;
+
+    transition: .3s;
+}
+
+/* =====================================================
+   NAVBAR HOVER UNDERLINE
+===================================================== */
+
+nav ul li a::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--primary);
+
+    transition: .4s;
+}
+
+nav ul li a:hover::after {
+
+    width: 100%;
+}
+
+nav ul li a:hover {
+
+    color: var(--primary);
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 100px;
+
+    padding: 120px 10%;
+}
+
+.hero-content {
+
+    flex: 1;
+}
+
+.hero-content h3 {
+
+    color: var(--primary);
+
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+
+    font-size: 4rem;
+
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+
+    color: #d1d5db;
+
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+
+    line-height: 1.8;
+
+    max-width: 600px;
+
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.btn {
+
+    padding: 12px 28px;
+
+    text-decoration: none;
+
+    color: white;
+
+    border-radius: 50px;
+
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--secondary));
+
+    transition: .4s;
+}
+
+.btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 20px var(--primary);
+}
+
+.btn-outline {
+
+    background: transparent;
+
+    border: 2px solid var(--primary);
+}
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+.hero-image img {
+
+    width: 350px;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid var(--primary);
+
+    box-shadow:
+        0 0 30px rgba(0, 198, 255, .5);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+/*
+    FLOATING IMAGE ANIMATION
+
+    Increase:
+
+    -20px
+
+    to
+
+    -40px
+
+    for stronger movement.
+*/
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+    }
+
+    100% {
+
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section {
+
+    padding: 100px 10%;
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    font-size: 2.5rem;
+
+    color: var(--primary);
+}
+
+/* =====================================================
+   GLASSMORPHISM CARDS
+===================================================== */
+
+.card {
+
+    background: var(--card-bg);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid var(--border);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    transition: .4s;
+}
+
+/*
+    Card hover effect
+*/
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 0 25px rgba(0, 198, 255, .3);
+}
+
+/* =====================================================
+   EDUCATION TIMELINE
+===================================================== */
+
+.timeline {
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.timeline-item {
+
+    width: 600px;
+
+    text-align: center;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+}
+
+.timeline-item h3 {
+    font-size: 2rem;
+
+}
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skill {
+
+    margin-bottom: 25px;
+}
+
+.skill span {
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.bar {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress {
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(90deg,
+            var(--primary),
+            var(--secondary));
+
+    animation: fill 2s ease;
+}
+
+@keyframes fill {
+
+    from {
+
+        width: 0;
+    }
+}
+
+/* Skill Percentages */
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 85%;
+}
+
+.js {
+    width: 75%;
+}
+
+.python {
+    width: 80%;
+}
+
+.cpp {
+    width: 70%;
+}
+
+.cyber {
+    width: 65%;
+}
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+}
+
+.project-card h3 {
+
+    margin-bottom: 15px;
+
+    color: var(--primary);
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+#contact .card {
+
+    text-align: center;
+}
+
+#contact p {
+
+    margin-top: 15px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid var(--border);
+
+    margin-top: 50px;
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #0a1728;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 20px;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media(max-width:900px) {
+
+    .hero {
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .hero-content h1 {
+
+        font-size: 3rem;
+    }
+
+    .hero-image img {
+
+        width: 250px;
+        height: 250px;
+    }
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav ul {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+}
+
+@media(max-width:600px) {
+
+    .hero-content h1 {
+
+        font-size: 2.3rem;
+    }
+
+    .section-title {
+
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+    }
+}
