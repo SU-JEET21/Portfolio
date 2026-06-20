@@ -31,8 +31,10 @@
     <!-- Navbar -->
     <nav>
         <div class="logo">Portfolio</div>
+        
+        <div class="menu-toggle" id="menu-toggle">☰</div>
 
-        <ul>
+        <ul id="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
@@ -327,7 +329,7 @@
 
             <p>Phone: +91 8122616309</p>
 
-            <p>LinkedIn: www.linkedin.com/in/sujeet-kumar-mondal</p>
+            <p>LinkedIn: <a href="www.linkedin.com/in/sujeet-kumar-mondal">Sujeet Kumar mondal</a></p>
 
             <p>GitHub: github.com/yourprofile</p>
 
@@ -343,7 +345,40 @@
         </p>
 
     </footer>
+    
+ <script>
 
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+    if (navLinks.classList.contains("active")) {
+
+        menuToggle.innerHTML = "✖";
+
+    } else {
+
+        menuToggle.innerHTML = "☰";
+    }
+
+});
+
+document.querySelectorAll("#nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.innerHTML = "☰";
+
+    });
+
+});
+
+</script>
 </body>
 
 </html>
