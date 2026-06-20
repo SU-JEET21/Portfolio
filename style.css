@@ -215,6 +215,21 @@ nav {
     color: var(--primary);
 }
 
+.menu-toggle {
+    
+    display: none;
+    
+    font-size: 2rem;
+    
+    color: white;
+    
+    cursor: pointer;
+    
+    z-index: 1001;
+    
+    user-select: none;
+}
+
 nav ul {
 
     display: flex;
@@ -614,7 +629,7 @@ section {
 .card h2 {
     text-align: center;
     color: #00c6ff;
-    
+
 }
 
 /* =====================================================
@@ -658,56 +673,77 @@ footer {
 ===================================================== */
 
 @media(max-width:900px) {
-
+    
+    nav {
+        
+        flex-direction: row;
+        
+        justify-content: space-between;
+        
+        align-items: center;
+        
+        padding: 20px 6%;
+    }
+    
+    .menu-toggle {
+        
+        display: block;
+    }
+    
+    nav ul {
+        
+        display: none;
+        
+        position: absolute;
+        
+        top: 80px;
+        
+        right: 0;
+        
+        width: 260px;
+        
+        flex-direction: column;
+        
+        align-items: center;
+        
+        gap: 25px;
+        
+        padding: 30px;
+        
+        background: rgba(7, 17, 31, 0.98);
+        
+        backdrop-filter: blur(15px);
+        
+        border-left: 1px solid var(--border);
+        
+        border-bottom: 1px solid var(--border);
+        
+        border-radius: 0 0 0 20px;
+    }
+    
+    nav ul.active {
+        
+        display: flex;
+    }
+    
     .hero {
-
+        
         flex-direction: column-reverse;
-
+        
         text-align: center;
-
+        
         gap: 50px;
     }
-
+    
     .hero-content h1 {
-
+        
         font-size: 3rem;
     }
-
+    
     .hero-image img {
-
+        
         width: 250px;
+        
         height: 250px;
-    }
-
-    nav {
-
-        flex-direction: column;
-
-        gap: 15px;
-    }
-
-    nav ul {
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-}
-
-@media(max-width:600px) {
-
-    .hero-content h1 {
-
-        font-size: 2.3rem;
-    }
-
-    .section-title {
-
-        font-size: 2rem;
-    }
-
-    .hero-buttons {
-
-        flex-direction: column;
     }
 }
