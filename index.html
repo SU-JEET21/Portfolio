@@ -356,6 +356,32 @@
         
     </footer>
 
+    <script>
+const menuToggle = document.getElementById("menu-toggle");
+const closeMenu = document.getElementById("close-menu");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.add("active");
+    menuToggle.style.display = "none";
+    closeMenu.style.display = "block";
+});
+
+closeMenu.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    closeMenu.style.display = "none";
+    menuToggle.style.display = "block";
+});
+
+document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        closeMenu.style.display = "none";
+        menuToggle.style.display = "block";
+    });
+});
+</script>
+
 </body>
 
 </html>
