@@ -268,6 +268,15 @@ nav ul li a:hover {
     color: var(--primary);
 }
 
+/* Hamburger Menu */
+.menu-toggle,
+.close-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
 /* =====================================================
    HERO SECTION
 ===================================================== */
@@ -371,20 +380,14 @@ nav ul li a:hover {
 
 .hero-image img {
 
-    width: 350px;
-
-    height: 350px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
 
     object-fit: cover;
 
     border-radius: 50%;
-
     border: 5px solid var(--primary);
-
-    box-shadow:
-        0 0 30px rgba(0, 198, 255, .5);
-
-    animation: float 4s ease-in-out infinite;
 }
 
 /*
@@ -458,6 +461,8 @@ section {
     border-radius: 20px;
 
     transition: .4s;
+
+    width: 100%;
 }
 
 /*
@@ -660,37 +665,57 @@ footer {
 @media(max-width:900px) {
 
     .hero {
-
         flex-direction: column-reverse;
-
         text-align: center;
-
         gap: 50px;
     }
 
     .hero-content h1 {
-
         font-size: 3rem;
     }
 
     .hero-image img {
-
         width: 250px;
         height: 250px;
     }
 
-    nav {
+    /* Hamburger visible */
+    .menu-toggle {
+        display: block;
+    }
 
-        flex-direction: column;
-
-        gap: 15px;
+    .close-menu {
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        z-index: 1001;
+        display: none;
     }
 
     nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background: rgba(7,17,31,0.98);
+        backdrop-filter: blur(15px);
 
-        flex-wrap: wrap;
-
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+
+        transition: 0.4s ease;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
     }
 }
 
@@ -723,4 +748,49 @@ footer {
   width: 100%;
   height: auto;      /* Maintains the original aspect ratio */
   display: block;    /* Removes unwanted bottom whitespace/gaps */
+}
+
+@media(max-width:480px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    .logo{
+        font-size:1.4rem;
+    }
+
+    .hero{
+        padding:120px 5% 50px;
+    }
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    .hero-content h2{
+        font-size:1.1rem;
+    }
+
+    .hero-content p{
+        font-size:0.9rem;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .card{
+        padding:20px;
+        margin:10px 0;
+    }
+
+    .timeline-item{
+        width:100%;
+    }
+
+    .timeline-item h3{
+        font-size:1.5rem;
+    }
 }
