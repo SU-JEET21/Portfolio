@@ -2,372 +2,208 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sujeet Kumar Mondal | Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Animated Background -->
-    <div class="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <canvas id="particles"></canvas>
 
-    <!-- Navbar -->
     <nav>
-        <div class="logo">Portfolio</div>
+        <div class="container nav-content">
 
-        <!-- Hamburger -->
-        <div class="menu-toggle" id="menu-toggle">☰</div>
-<div class="close-menu" id="close-menu">✕</div>
+            <div class="logo">Portfolio</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#Certificate">Certificate</a>
+                <a href="#contact">Contact</a>
 
-        <ul id="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+
+                <div class="menu-icon" id="menuIcon">
+                    ☰
+                </div>
+
+                <div class="close-icon" id="closeIcon">
+                    ✕
+                </div>
+
+            </div>
+        </div>
     </nav>
 
-    <!-- Hero -->
-    <section id="hero" class="hero">
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hello, I'm Sujeet Kumar Mondal</h1>
+                <h2>Full Stack Developer</h2>
+                <p>
+                    Replace this text with your introduction.
+                    Showcase your skills, experience, and projects
+                    through this modern portfolio website.
+                </p>
 
-        <div class="hero-content">
+                <img src="img/profile picture.jpeg" alt="Sujeet Kumar Mondal">
 
-            <h3>Hello, I'm</h3>
-
-            <h1>Sujeet Kumar Mondal</h1>
-
-            <h2>Computer Science Student</h2>
-
-            <p>
-                Passionate about Web Development, Robotics,
-                Drone Technology, Cyber Security and AI.
-                I enjoy building innovative solutions that
-                solve real-world problems.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#projects" class="btn">
-                    View Projects
-                </a>
-
-                <a href="certificates and resume/SUJEET KUMAR MONDAL resume.pdf" target="_blank"
-                    class="btn btn-outline">
-                    Download Resume
-                </a>
-
+                <div class="btns">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="certificates and resume/SUJEET KUMAR MONDAL resume.pdf" class="btn secondary"
+                        target="_blank">Resume</a>
+                </div>
             </div>
-
         </div>
-
-        <div class="hero-image">
-
-            <img src="img/profile picture.jpeg" alt="Profile picture">
-
-        </div>
-
     </section>
 
-    <!-- About -->
     <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
 
-        <div class="card">
+            <div class="about-grid">
+                <div class="card">
+                    <h3>Who I Am</h3>
+                    <br>
+                    <p>
+                        I am a B.Tech IT student who is passionate
+                        about technology and always curious to learn new
+                        things. I have intermediate technical skills and good
+                        knowledge of drone technology and its applications.
+                        I have a strong mindset toward learning, improving
+                        my skills, and exploring emerging technologies. I am
+                        currently looking for internship or entry-level
+                        opportunities where I can gain practical experience
+                        and grow in the tech industry.
 
-            <h2>About Me</h2>
+                    </p>
+                </div>
 
-            <p>
-                Hello! I'm a passionate student with a keen interest
-                in Web Development, Programming, Robotics,
-                Artificial Intelligence and Cyber Security.
-
-                I enjoy learning new technologies and building
-                projects that combine software and hardware.
-
-                My goal is to become a skilled engineer capable
-                of creating impactful technology solutions.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-
-        <h2 class="section-title">
-            Education
-        </h2>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-
-                <h3>Bachelor of Technology</h3>
-
-                <p>
-                    Sathyabama Institute of Science and Technology
-                </p>
-
-                <span>2023 - 2027</span>
-
-                <p>CGPA: 7.08 / 10</p>
-
-                <h3>Higher Secondary Education</h3>
-
-                <p>
-                    Velammal Matriculation Higher Secondary School
-
-                </p>
-
-                <h3>Secondary Education</h3>
-
-                <p>Velammal Matriculation Higher Secondary School
-
-                </p>
-
+                <div class="card">
+                    <h3>What I Do</h3>
+                    <br>
+                    <p>
+                        I am a generalist with interest in learning everything. I do editing, coding, tech related work.
+                    </p>
+                </div>
             </div>
-
         </div>
-
     </section>
 
-    <!-- Skills -->
     <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
 
-        <h2 class="section-title">
-            Skills
-        </h2>
-
-        <div class="card">
-
-            <div class="skill">
-
-                <span>HTML</span>
-
-                <div class="bar">
-                    <div class="progress html"></div>
-                </div>
-
+            <div class="skills-grid">
+                <div class="card skill">HTML</div>
+                <div class="card skill">CSS</div>
+                <div class="card skill">JavaScript</div>
+                <div class="card skill">React</div>
+                <div class="card skill">Node.js</div>
+                <div class="card skill">Python</div>
             </div>
-
-            <div class="skill">
-
-                <span>CSS</span>
-
-                <div class="bar">
-                    <div class="progress css"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <span>JavaScript</span>
-
-                <div class="bar">
-                    <div class="progress js"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <span>Python</span>
-
-                <div class="bar">
-                    <div class="progress python"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <span>C++</span>
-
-                <div class="bar">
-                    <div class="progress cpp"></div>
-                </div>
-
-            </div>
-
-            <div class="skill">
-
-                <span>Cyber Security</span>
-
-                <div class="bar">
-                    <div class="progress cyber"></div>
-                </div>
-
-            </div>
-
         </div>
-
     </section>
 
-    <!-- Projects -->
     <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
 
-        <h2 class="section-title">
-            Projects
-        </h2>
+            <div class="projects-grid">
 
-        <div class="projects-container">
+                <div class="card project-card">
+                    <h3>Project One</h3>
+                    <p>Project description goes here.</p>
+                    <a href="#" class="btn primary">View</a>
+                </div>
 
-            <div class="card project-card">
+                <div class="card project-card">
+                    <h3>Project Two</h3>
+                    <p>Project description goes here.</p>
+                    <a href="#" class="btn primary">View</a>
+                </div>
 
-                <h3>Surveillance Drone</h3>
-
-                <p>
-                    Designed and built a surveillance drone
-                    with onboard camera and YOLO object detection
-                    for real-time aerial monitoring.
-                </p>
-
-            </div>
-
-            <div class="card project-card">
-
-                <h3>Rover</h3>
-
-                <p>
-                    Developed a robotic rover integrated
-                    with gas sensors, temperature sensors
-                    and camera module for remote monitoring.
-                </p>
+                <div class="card project-card">
+                    <h3>Project Three</h3>
+                    <p>Project description goes here.</p>
+                    <a href="#" class="btn primary">View</a>
+                </div>
 
             </div>
-
         </div>
-
     </section>
 
-    <!-- Certificates -->
-    <section id="certificates">
 
-        <h2 class="section-title">
-            Certificates
-        </h2>
+    <section id="Certificate">
+        <div class="container-certificate">
+            <h2 class="section-title">Certificates</h2>
 
-        <div class="card">
+            <div class="card-img">
+                <h2>Professional Training in Drone Technology</h2>
 
-            <h3>
-                Professional Training in Drone Technology
-            </h3>
+                <!-- <p>Completed
+                    hands-on training covering drone components,
+                    flight systems, and real-world applications.
+                </p> -->
 
-            <p>
-                Completed hands-on training covering
-                drone systems, components,
-                applications and operations.
-            </p>
+                <img src="img/Drone certificate.jpg" alt="">
+            </div>
 
-            <!-- <div class="cards-img"><img src="img/Drone certificate.jpg" alt="Drone Technology Certificate"></div> -->
+            <div class="card-img">
+                <h2>GenAI Powered Data Analytics Job Simulation</h2>
+
+                <!-- <p>Completed
+                    certificate in GenAI Powered Data Analytics.
+                </p> -->
+
+                <img src="img/Gen AI.png" alt="">
+            </div>
+
+            <div class="card-img">
+                <h2>CyberSecurity Analyst Job Simulation</h2>
+
+                <!-- <p> Completed
+                    certificate in CyberSecurity Analyst job Simulation provided by
+                    TATA.</p> -->
+
+                <img src="img/cybersecurity.png" alt="">
+            </div>
+
+            <div class="card-img">
+                <h2>Hackathon</h2>
+
+                <!-- <p>I have conducted a 24hrs Hackathon</p> -->
+
+                <img src="img/hackathon certificate.jpg" alt="">
+            </div>
+
         </div>
-        <div class="card">
-            <h3>
-                Cybersecurity / Ethical Hacking Training
-            </h3>
-
-            <p>
-                Gained
-                foundational knowledge in cybersecurity concepts, network
-                security, and ethical hacking practices
-            </p>
-            <!-- <div class="cards-img"><img src="img/cybersecurity.png" alt="CyberSecurity Certificate"></div> -->
-        </div>
-
-        <div class="card">
-            <h3>
-                GenAI Powered Data Analytics Job Simulation
-            </h3>
-
-            <p>
-                Completed
-                certificate in GenAI Powered Data Analytics.
-
-            </p>
-            <!-- <div class="cards-img"><img src="img/artificial intelligence.png" alt="Artificial Intelligence"></div> -->
-        </div>
-
-        <div class="card">
-            <h3>
-                Hackathon
-            </h3>
-
-            <p>
-                I have participated and conducted 24hrs Innoverse Hackathon. 
-            </p>
-            <!-- <div class="cards-img"><img src="img/hackathon certificate.jpg" alt="Hackathon Certificate"></div> -->
-        </div>
-        </div>
-
     </section>
 
-    <!-- Contact -->
+
     <section id="contact">
+        <div class="container contact">
+            <h2 class="section-title">Contact</h2>
 
-        <div class="card">
-            <h2>Contact</h2>
-
-
-            <p>Email: sujeet21kumar23@gmail.com</p>
-
-            <p>Phone: +91 8122616309</p>
-
-            <p>LinkedIn: <a href="www.linkedin.com/in/sujeet-kumar-mondal">sujeet-kumar-mondal</a></p>
-
-            <p>GitHub: <a href="https://github.com/SU-JEET21>
-">SU-JEET21</a></p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
         </div>
-
     </section>
 
-    <!-- Footer -->
     <footer>
-
-        <p>
-            © 2026 Sujeet Kumar Mondal
-        </p>
-        
+        © 2026 Sujeet Kumar Mondal. All Rights Reserved.
     </footer>
 
-    <script>
-const menuToggle = document.getElementById("menu-toggle");
-const closeMenu = document.getElementById("close-menu");
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.add("active");
-    menuToggle.style.display = "none";
-    closeMenu.style.display = "block";
-});
-
-closeMenu.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    closeMenu.style.display = "none";
-    menuToggle.style.display = "block";
-});
-</script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
